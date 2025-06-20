@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday!</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    section {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .slide1 {
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .slide2 {
+      background: linear-gradient(to right, #a18cd1, #fbc2eb);
+    }
+
+    .slide3 {
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    }
+
+    .slide4 {
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+    }
+
+    .slide5 {
+      background: linear-gradient(to right, #c2e9fb, #a1c4fd);
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #fff;
+      animation: fadeIn 2s;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #fff;
+      max-width: 700px;
+      margin-top: 20px;
+    }
+
+    .button {
+      margin-top: 30px;
+      padding: 10px 25px;
+      border: none;
+      background-color: #fff;
+      color: #ff4081;
+      font-weight: bold;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #ff4081;
+      color: #fff;
+      box-shadow: 0 0 10px rgba(255, 64, 129, 0.4);
+    }
+
+    .cake {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin-top: 30px;
+    }
+
+    .cake .layer {
+      position: absolute;
+      width: 200px;
+      height: 60px;
+      background: pink;
+      border-radius: 10px;
+      left: 0;
+    }
+
+    .cake .layer:nth-child(1) {
+      top: 0;
+      background: #ffb6c1;
+    }
+
+    .cake .layer:nth-child(2) {
+      top: 60px;
+      background: #ff69b4;
+    }
+
+    .cake .layer:nth-child(3) {
+      top: 120px;
+      background: #ff1493;
+    }
+
+    .candle {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 30px;
+      background: white;
+      border-radius: 2px;
+    }
+
+    .flame {
+      width: 15px;
+      height: 15px;
+      background: yellow;
+      border-radius: 50%;
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: flicker 0.4s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0% { transform: translateX(-50%) scale(1); opacity: 1; }
+      100% { transform: translateX(-50%) scale(1.2); opacity: 0.7; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    nav {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.3);
+      padding: 8px 15px;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: #fff;
+      color: #ff4081;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  
+
+  </style>
+</head>
+<body>
+<audio src="" autoplay loop></audio>
+
+  <nav>
+    <a href="#slide1">Home</a>
+    <a href="#slide2">Wishes</a>
+    <a href="#slide3">Memories</a>
+    <a href="#slide4">Cake</a>
+    <a href="#slide5">Message</a>
+  </nav>
+
+  <!-- Slide 1 -->
+  <section class="slide1" id="slide1">
+    <h1>🎉 Happy Birthday, hee! 🎉</h1>
+    <p>Today is all about celebrating YOU – your smile, your soul, and the light you bring to this world! 💖</p>
+    <a href="#slide2" class="button">Next ➜</a>
+  </section>
+
+  <!-- Slide 2 -->
+  <section class="slide2" id="slide2">
+    <h1>💌 Wishes Just for You</h1>
+    <p>May your birthday be full of sunshine, happiness, love, laughter, and everything that makes your heart sing! 🎶✨</p>
+    <a href="#slide3" class="button">Next ➜</a>
+  </section>
+
+  <!-- Slide 3 -->
+  <section class="slide3" id="slide3">
+    <h1>📸 Sweet Memories</h1>
+    <p>From all the giggles, secrets, and sweet chats – here's to all the unforgettable moments that make you so special.</p>
+    <a href="#slide4" class="button">Next ➜</a>
+  </section>
+
+
+  <!-- Slide 4 -->
+  <section class="slide4" id="slide4">
+    <h1>🎂 Time for Cake!</h1>
+    <div class="cake">
+      <div class="layer"></div>
+      <div class="layer"></div>
+      <div class="layer"></div>
+      <div class="candle">
+        <div class="flame"></div>
+      </div>
+    </div>
+    <p>Make a wish and blow out the candle! 🕯️</p>
+    <a href="#slide5" class="button">Next ➜</a>
+  </section>
+
+  <!-- Slide 5 -->
+  <section class="slide5" id="slide5">
+    <h1>💖 Final Message</h1>
+    <p>Never forget how loved you are. You light up lives and deserve nothing but the absolute best. 💫<br><br>
+      Happy Birthday once again!</p>
+    <footer>Made with razzaq by someone who cares.</footer>
+  </section>
+
+  <script>
+  // Play audio after first user interaction (click or touch)
+  function enableAudioPlayback() {
+    const audio = document.getElementById("bgMusic");
+    audio.play().catch(() => {
+      // Some browsers need a second interaction
+      console.log("Autoplay blocked, waiting for user gesture");
+    });
+    document.removeEventListener("click", enableAudioPlayback);
+    document.removeEventListener("touchstart", enableAudioPlayback);
+  }
+
+  document.addEventListener("click", enableAudioPlayback);
+  document.addEventListener("touchstart", enableAudioPlayback);
+</script>
+
+
+</body>
+</html>
